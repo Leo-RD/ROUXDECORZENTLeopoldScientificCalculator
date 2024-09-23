@@ -28,7 +28,7 @@ namespace ROUXDECORZENTLeopoldScientificCalculator
 
         }
 
- // Déclaration des variable
+ // Déclaration des variable/ Declaration of variables
         double num1 =0;
         double num2 =0;
         double result = 0;
@@ -225,7 +225,7 @@ namespace ROUXDECORZENTLeopoldScientificCalculator
 
         }
 
-// Définition des différents boutons de la calculatrice
+// Définition des différents boutons de la calculatrice/ Defining the different buttons of the calculator
 
      private void display(string num)
         {
@@ -240,7 +240,7 @@ namespace ROUXDECORZENTLeopoldScientificCalculator
 
         }
 
-// Fonction pour afficher les chiffres sur l'écran de la calculatrice
+// Fonction pour afficher les chiffres sur l'écran de la calculatrice/ Function to display the numbers on the calculator screen
         
     }
 }
