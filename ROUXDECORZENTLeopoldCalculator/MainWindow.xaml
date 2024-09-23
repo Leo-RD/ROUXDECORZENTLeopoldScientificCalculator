@@ -1,0 +1,125 @@
+﻿<Window x:Class="ROUXDECORZENTLeopoldScientificCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ROUXDECORZENTLeopoldCalculator"
+        mc:Ignorable="d"
+        Title="CalculatorLRD" Height="850" Width="520">
+    <Grid Background="#637074">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="150"/>
+         
+           
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Background" Value="#8693AB"/>
+                <Setter Property="FontSize" Value="38"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Style.Resources>
+            </Style>
+            <Style x:Key="MyStyle" TargetType="{x:Type Control}">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Background" Value="#F06A0C"/>
+                <Setter Property="FontSize" Value="38"/>
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Style.Resources>
+            </Style>
+            <Style x:Key="ClearStyle" TargetType="{x:Type Control}">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Background" Value="#279AF1"/>
+                <Setter Property="FontSize" Value="38"/>
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Style.Resources>
+            </Style>
+            <Style x:Key="EqualStyle" TargetType="{x:Type Control}">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Background" Value="#4D8B31" />
+                <Setter Property="FontSize" Value="38"/>
+               
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Style.Resources>
+            </Style>
+
+
+            <Style x:Key="ScientificStyle" TargetType="{x:Type Control}">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Background" Value="#D72638"/>
+                <Setter Property="FontSize" Value="38"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Style.Resources>
+            </Style>
+
+
+        </Grid.Resources>
+        <!--/row 1-->
+        <TextBox Grid.Row="0" Grid.ColumnSpan="4" Name="TB_Display"></TextBox>
+        <Button Grid.Row="1" Grid.Column="0" Name="BTN_1" Content="1" Click="BTN_1_Click" />
+        <Button Grid.Row="1" Grid.Column="1" Name="BTN_2" Content="2" Click="BTN_2_Click" />
+        <Button Grid.Row="1" Grid.Column="2" Name="BTN_3" Content="3" Click="BTN_3_Click" />
+        <Button Grid.Row="1" Grid.Column="3" Name="BTN_Plus" Style="{StaticResource MyStyle}" Content="+" Click="BTN_Plus_Click" />
+        
+        <Button Grid.Row="2" Grid.Column="0" Name="BTN_4" Content="4" Click="BTN_4_Click" />
+        <Button Grid.Row="2" Grid.Column="1" Name="BTN_5" Content="5" Click="BTN_5_Click" />
+        <Button Grid.Row="2" Grid.Column="2" Name="BTN_6" Content="6" Click="BTN_6_Click" />
+        <Button Grid.Row="2" Grid.Column="3" Name="BTN_Minus" Style="{StaticResource MyStyle}" Content="-" Click="BTN_Minus_Click" />
+
+        <Button Grid.Row="3" Grid.Column="0" Name="BTN_7" Content="7" Click="BTN_7_Click" />
+        <Button Grid.Row="3" Grid.Column="1" Name="BTN_8" Content="8" Click="BTN_8_Click" />
+        <Button Grid.Row="3" Grid.Column="2" Name="BTN_9" Content="9" Click="BTN_9_Click" />
+        <Button Grid.Row="3" Grid.Column="3" Name="BTN_Multiplication" Style="{StaticResource MyStyle}"  Content="*" Click="BTN_Multiplication_Click" />
+
+        <Button Grid.Row="4" Grid.Column="0" Name="BTN_0" Content="0" Click="BTN_0_Click" />
+        <Button Grid.Row="4" Grid.Column="1" Name="BTN_Clear" Style="{StaticResource ClearStyle}" Content="CLR" Click="BTN_Clear_Click" />
+        <Button Grid.Row="4" Grid.Column="2" Name="BTN_Equal" Style="{StaticResource EqualStyle}" Content="=" Click="BTN_Equal_Click" />
+        <Button Grid.Row="4" Grid.Column="3" Name="BTN_Divide" Style="{StaticResource MyStyle}" Content="/" Click="BTN_Divide_Click" />
+
+        <Button Grid.Row="5" Grid.Column="0" Name="BTN_Backspace" Style="{StaticResource ScientificStyle}" Content="Back" Click="BTN_Backspace_Click" />
+        <Button Grid.Row="5" Grid.Column="1" Name="BTN_SquareRoot" Style="{StaticResource ScientificStyle}" Content="√" Click="BTN_SquareRoot_Click" />
+        <Button Grid.Row="5" Grid.Column="2" Name="BTN_Square" Style="{StaticResource ScientificStyle}" Content="x²" Click="BTN_Square_Click" />
+        <Button Grid.Row="5" Grid.Column="3" Name="BTN_Percentage" Style="{StaticResource ScientificStyle}" Content="%" Click="BTN_Percentage_Click" />
+        <Button Grid.Row="6" Grid.Column="0" Name="BTN_Dot" Style="{StaticResource ScientificStyle}" Content="." Click="BTN_Dot_Click" />
+        <Button Grid.Row="6" Grid.Column="1" Name="BTN_Reciprocal" Style="{StaticResource ScientificStyle}" Content="1/x" Click="BTN_Reciprocal_Click" />
+        <Button Grid.Row="6" Grid.Column="2" Name="BTN_Negative" Style="{StaticResource ScientificStyle}" Content="+/-" Click="BTN_Negative_Click" />
+        <Button Grid.Row="6" Grid.Column="3" Name="BTN_ClearAll" Style="{StaticResource ClearStyle}" Content="C" Click="BTN_ClearAll_Click" />
+        
+
+
+
+    </Grid>
+   
+</Window>
