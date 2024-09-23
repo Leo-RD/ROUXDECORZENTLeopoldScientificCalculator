@@ -200,6 +200,8 @@ namespace ROUXDECORZENTLeopoldScientificCalculator
             TB_Display.Text = result.ToString();
         }
 
+        //lugjkuggg
+
         private void BTN_Reciprocal_Click(object sender, RoutedEventArgs e)
         {
             num1 = float.Parse(TB_Display.Text);
